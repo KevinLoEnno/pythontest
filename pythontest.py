@@ -9,4 +9,4 @@ df = pd.read_csv(StringIO("\n".join([i.translate({ord(c): None for c in ' '})
                                      if len(i.split('",')) == 17 and i[0] != '='])), header=0)
 
 
-print (df)
+print (	df[pd.to_numeric(df['證券代號'], errors='coerce') == 6414])
